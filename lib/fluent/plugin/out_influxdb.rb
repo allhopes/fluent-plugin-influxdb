@@ -173,7 +173,7 @@ DESC
 
       point = {
         timestamp: timestamp,
-        series: @measurement || tag,
+        series: extract_placeholders(@measurement, chunk) || tag,
         values: values,
         tags: tags,
       }
